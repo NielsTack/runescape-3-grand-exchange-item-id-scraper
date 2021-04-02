@@ -53,9 +53,10 @@ foreach ($categoryrange as $category) {
 }
 
 
-
+sort($items);
 // encode items array to json
 $json = json_encode($items);
+
 
 //write json to file
 if (file_put_contents("items.json", $json)) {
